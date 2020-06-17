@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+  <div class="big-container">
+
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <div class="paper-wrapper">
+        <div class="paper-meta">
+          <h3>YEAR {{ page.yearnum}} &nbsp;&nbsp;//&nbsp;&nbsp; WEEK {{ page.week }}</h3>
+
+
+
+          <p class="post-meta">Summarised by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span></p>
+          <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+
+          <div class="tags">
+            {% for tag in page.tags %}
+              <div class="tag">
+                {{ tag }}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="paper-content">
+
+
+
+          <div class="post-header">
+            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+            <p class="subheading">{{ page.paperauthors | join: ", " }} [{{ page.yearpub }}]</p>
+          </div>
+
+
+          <div class="post-content" itemprop="articleBody">
+            {{ content }}
+          </div>
+
+          <hr />
+
+          <div class="suggested-reading">
+            {% if page.next %}
+              <p>Read next:<br /> <a class="" rel="next" href="{{ page.next.url }}">{{ page.next.title }}</a></p>
+            {% endif %}
+
+            {% if page.previous %}
+              <p>Read previous:<br /> <a class="" rel="prev" href="{{ page.previous.url }}">{{ page.previous.title }}</a></p>
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+
+    </article>
+
+  </div>

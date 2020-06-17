@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  font-size: $base-font-size;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background: #fef8f4;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  max-width: $paragraph-width;
+  font-size: $base-font-size;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  margin-bottom: 0.667rem;
+}
+h3 {
+  margin-top: 2rem;
+}
+a {
+  color: $accent-color;
+  text-decoration: none;
+  &:hover {
+    color: $accent-color;
+    text-decoration: underline;
+  }
+}
+
+blockquote {
+  color: $grey-color;
+  border-left: 3px solid $light-grey;
+  padding-left: 1rem;
+  padding-right: 0.6rem;
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  @include for-big-phones-up {
+    font-size: 1.2rem;
+  }
+}
+
+hr {
+  margin: 1rem 0;
+  border: 0;
+  border-bottom: $border;
+}
+
+figure {
+  margin-bottom: 2rem;
+}
+
+figcaption {
+  max-width: 550px;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+img, video {
+  max-width: 100%;
+  vertical-align: middle;
+  display: block;
+  margin: 0 auto;
+}
+
+ul, ol, dl {
+  margin-left: 1.3rem;
+  margin-bottom: 1rem;
+  max-width: $paragraph-width;
+  line-height: 1.8;
+}
+
+li {
+  margin-bottom: 0.333rem;
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+dd, dt {
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+pre,
+code {
+  font-size: 15px;
+  border: 1px solid $light-grey;
+  border-radius: 3px;
+  background-color: #eef;
+  margin-bottom: 1rem;
+}
+code {
+  padding: 1px 5px;
+}
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+iframe {
+  width: 100%;
+}

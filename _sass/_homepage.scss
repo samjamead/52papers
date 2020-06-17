@@ -1,0 +1,62 @@
+#homepage {
+  .masthead {
+    background: $dark-grey;
+    color: #9da5b4;
+    text-align: center;
+    @include for-tablet-landscape-up {
+      text-align: left;
+    };
+  }
+  .hero {
+    border-top: 1px solid #9da5b4;
+    padding: 3rem 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .herometa {
+      flex: 0 0 100%;
+      margin-bottom: 2rem;
+      @include for-tablet-landscape-up {
+        flex-basis: 250px;
+        margin-right: 2rem;
+      };
+    }
+    .heropost {
+      flex: 0 0 100%;
+      @include for-tablet-landscape-up {
+        flex: 1 1 700px;
+      };
+    }
+    h1 {
+      color: #fff;
+      font-size: 1.33rem;
+      margin-top: 2rem;
+      a {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+    h3 {
+      margin-top: 0;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+    }
+    .description {
+      color: #fff;
+      margin-top: 2rem;
+      line-height: 1.8;
+    }
+    .postlink {
+      a {
+        color: #9da5b4;
+        text-decoration: underline;
+        transition: 0.4s ease;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
