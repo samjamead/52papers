@@ -54,7 +54,7 @@ jQuery(document).ready(function($){
       console.log("pass");
       // Send webhook
       $.ajax({
-        url: "https://hooks.zapier.com/hooks/catch/564458/o8bzrvx",
+        url: "https://hooks.zapier.com/hooks/catch/564458/o8ugcbk/",
         // url: "https://endr4iyspb75.x.pipedream.net", // Test url
         type: "POST",
         data: {
