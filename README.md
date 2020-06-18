@@ -4,8 +4,10 @@ Bridging the research-practice gap in education
 Roadmap:  
 
 - [ ] Google analytics  
-- [ ] About page copy editing & sidenav
+- [x] About page copy editing & sidenav
 - [ ] Subscription page
-- [ ] Contributions  
+- [x] Contributions  
 - [ ] Moar reviews
-- [ ] Gitignore
+- [x] Gitignore
+- [ ] Index banner
+- [ ] Footer

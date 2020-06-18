@@ -7,7 +7,7 @@ $brand-color:           #58e2C3; // green
 $accent-color:          #6499e3; // blue
 $light-grey:            #e7e7e7;
 $grey-color:            #979797;
-$dark-grey:             #24272d; 
+$dark-grey:             #24272d;
 $background-color:      #fff;
 $text-color:            $dark-grey;
 $border:                1px solid $light-grey;
@@ -27,5 +27,7 @@ $paragraph-width:       650px;
   "header",
   "footer",
   "post",
-  "homepage"
+  "homepage",
+  "page",
+  "tags"
 ;

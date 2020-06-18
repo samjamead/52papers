@@ -10,18 +10,19 @@ layout: default
         <div class="paper-meta">
           <h3>YEAR {{ page.yearnum}} &nbsp;&nbsp;//&nbsp;&nbsp; WEEK {{ page.week }}</h3>
 
-
-
           <p class="post-meta">Summarised by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span></p>
           <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
 
           <div class="tags">
             {% for tag in page.tags %}
-              <div class="tag">
+              <div class="tag {{ tag | downcase | replace: ' ', '-' }}">
                 {{ tag }}
               </div>
             {% endfor %}
           </div>
+
+          <p><strong>{{ page.readingtime }} minute read</strong></p>
+
         </div>
 
         <div class="paper-content">

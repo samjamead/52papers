@@ -43,6 +43,41 @@ jQuery(document).ready(function($){
     $(this).html($fignum);
   });
 
+  // Send webhook to Zapier on form submit
+  $("#subscription-form").on('submit', function(e){
+    e.preventDefault();
+    // Get email
+    var $email = $('#email').val();
+    // Validate
+    var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,}$/i;
+    if (testEmail.test($email)) {
+      console.log("pass");
+      // Send webhook
+      $.ajax({
+        url: "https://hooks.zapier.com/hooks/catch/564458/o8bzrvx",
+        // url: "https://endr4iyspb75.x.pipedream.net", // Test url
+        type: "POST",
+        data: {
+          "email": $email
+        },
+        complete: function(){
+          $("#email").prop( "disabled", true );
+          $("#submit-btn").prop( "disabled", true ).attr('value', 'Subscribed');
+          $(".success").fadeIn();
+          console.log('Webhook sent');
+        }
+      });
+      // reset form
+    } else {
+      console.log("Failed validation");
+      $(".error").fadeIn().addClass("active-error");
+      setTimeout(function () {
+        $('.error').fadeOut();
+      }, 5000);
+    }
+
+  });
+
 });
 
 // Trigger sizing functions on window resize

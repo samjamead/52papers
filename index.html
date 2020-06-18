@@ -14,41 +14,60 @@ body_id: homepage
         </div>
         <div class="heropost">
 
-          <div class="tags">
-            {% for tag in post.tags %}
-              <div class="tag">
-                {{ tag }}
-              </div>
-            {% endfor %}
-          </div>
+          {% include tagsloop.html %}
 
           <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
           <p class="subheading">{{ post.paperauthors | join: ", " }} [{{ post.yearpub }}]</p>
 
-
-
           <p class="description">{{ post.description }}</p>
-          <p class="postlink"><a href="{{ post.url }}">Read summary</a></p>
+          <p class="postlink"><i class="fas fa-angle-double-right"></i> <a href="{{ post.url }}">Read summary</a> </p>
         </div>
       </div>
     {% endfor %}
   </div>
 </div>
 
+<div class="stripe">
+  <div class="container">
+    <div class="about-callout">
+      <h2>About 52 Papers</h2>
+      <p>52 Papers helps teachers bridge the research-practice gap. We summarise one academic paper in education each week.</p>
+      <p><i class="fas fa-angle-double-right"></i> <a href="/about">Read more</a></p>
+    </div>
+    <div class="subscribe-callout">
+      <h2>Subscribe</h2>
+      <p>An education research paper per week. Summarised. In your inbox. <br /> (It's free!)</p>
+      <p><i class="fas fa-angle-double-right"></i> <a href="/subscribe">Subscribe</a> </p>
+    </div>
+  </div>
+</div>
+
 <div class="container">
 
-  <section class="post-list" id="allposts">
-    <h2>Year Zero.</h2>
+  <section class="archive-list" id="allposts">
+
+    <h2>Year 1</h2>
+    <hr />
+
     {% for post in site.posts offset:1 %}
-      <div class="post-list-date">
-        <h3>Week {{ post.week }}</h3>
-      </div>
-      <div class="post-list-title">
-        <h3>{{ post.authors | join: ", " }} [{{ post.yearpub }}] &mdash; <a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <p>{{ post.description }} <em>{{ post.date | date: "%b %-d, %Y" }}</em></p>
-        <hr />
+      <div class="paper-wrapper">
+        <div class="paper-meta">
+          <h3>WEEK {{ post.week }}</h3>
+          <div class="tags">
+            {% include tagsloop.html %}
+          </div>
+        </div>
+
+        <div class="paper-content">
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p class="subheading">{{ post.paperauthors | join: ", " }} [{{ post.yearpub }}]</p>
+          <p>{{ post.description }}</p>
+          <p class="postlink"><i class="fas fa-angle-double-right"></i> <a href="{{ post.url }}">Read summary</a> </p>
+        </div>
+
       </div>
     {% endfor %}
+
   </section>
 
 </div>

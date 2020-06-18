@@ -1,0 +1,60 @@
+// =======================================
+//  Subs page SASS
+// =======================================
+
+.reference-list {
+  p {
+    font-size: 15px;
+    margin-left: 30px;
+    text-indent: -30px;
+  }
+}
+
+form {
+  margin-bottom: 1rem;
+}
+#email, #submit-btn {
+  padding: 0.5rem;
+  border: 1px solid #222;
+  &:focus {
+    outline: none;
+  }
+}
+#email {
+  min-width: 280px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  &:disabled {
+    color: #9da5b4;
+  }
+}
+#submit-btn {
+  cursor: pointer;
+  background: #66c764;
+  color: #fff;
+  border-left: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: -5px;
+  transition: 0.4s ease;
+  &:hover {
+    background: darken(#66c764, 10%);
+  }
+  &:disabled {
+    cursor: default;
+    background: darken(#66c764, 20%);
+  }
+}
+.error, .success {
+  display: none;
+}
+.error {
+  color: #ff3869;
+}
+.messages {
+  padding-top: 0.25rem;
+  height: 1.5rem;
+  p {
+    margin-bottom: 0;
+  }
+}

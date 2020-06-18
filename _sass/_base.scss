@@ -19,11 +19,10 @@ html {
 }
 
 body {
-  background: #fef8f4;
+  background: #fdf9f5;
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   color: $text-color;
-  background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -62,7 +61,7 @@ a {
 }
 
 blockquote {
-  color: $grey-color;
+  color: darken($grey-color, 10%);
   border-left: 3px solid $light-grey;
   padding-left: 1rem;
   padding-right: 0.6rem;
@@ -70,9 +69,6 @@ blockquote {
   font-style: italic;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  @include for-big-phones-up {
-    font-size: 1.2rem;
-  }
 }
 
 hr {

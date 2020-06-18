@@ -13,6 +13,28 @@ footer {
   padding: 1.5rem 0rem;
   border-top: $border;
   h2 {
-    color: $brand-color;
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-family: 'Merriweather', $base-font-family;
+    transition: 0.4s ease;
+    color: #222;
+  }
+  p, ul {
+    font-size: 15px;
+  }
+  ul {
+    margin: 0;
+    list-style-type: none;
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      i {
+        font-size: 11px;
+      }
+    }
   }
 }

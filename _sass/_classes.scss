@@ -33,34 +33,6 @@
   border: 0;
   border-bottom: 1.5px solid $dark-grey;
 }
-.post-list {
-  @extend .flex;
-  align-items: flex-start;
-  font-size: 0.8rem;
-  @include for-big-phones-up {
-    font-size: 0.9rem;
-  }
-  h2 {
-    margin-bottom: 1rem;
-    flex: 0 0 100%;
-  }
-  h3 {
-    margin-top: 0;
-  }
-  .post-list-date {
-    flex: 0 0 26%;
-    text-align: right;
-    @include for-tablet-landscape-up {
-      flex-basis: 16%;
-    }
-  }
-  .post-list-title {
-    flex: 0 0 66%;
-    @include for-tablet-landscape-up {
-      flex-basis: 76%;
-    }
-  }
-}
 .heading-underline {
   margin-top: 10px;
   margin-bottom: 2rem;

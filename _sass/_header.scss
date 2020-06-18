@@ -1,9 +1,9 @@
 .site-header {
-  background: #24272d; // Dark grey: #24272d; or lighter option: #353a40
+  background: $dark-grey; 
   width: 100%;
   z-index: 1001;
   .big-container {
-    margin-top: -175px;
+    margin-top: -127px; // This is an inexact science
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,7 +121,7 @@
   margin-top: -2px; }
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 40px;
-    height: 4px;
+    height: 3px;
     background-color: #fff;
     border-radius: 4px;
     position: absolute;

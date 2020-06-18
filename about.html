@@ -2,26 +2,27 @@
 layout: default
 title: About 52 Papers
 body_id: about
-tags: [Big Issues, Research-Practice Gap]
+tags: [Big Issue, Research-Practice Gap]
 ---
 
 <div class="big-container">
 
   <div class="paper-wrapper">
     <div class="paper-meta">
-      <h3>About 52 Papers</h3>
+      <h3>ABOUT 52 PAPERS</h3>
       <div class="tags">
         {% for tag in page.tags %}
-          <div class="tag">
+          <div class="tag {{ tag | downcase | replace: ' ', '-' }}">
             {{ tag }}
           </div>
         {% endfor %}
       </div>
+
     </div>
 
     <div class="paper-content">
       <h1>About 52 Papers</h1>
-      
+
       <section>
 
         <p>52 Papers exists to help teachers access educational research. It is intended as a bridge to help cross the research-practice gap in education.</p>
@@ -45,32 +46,39 @@ tags: [Big Issues, Research-Practice Gap]
 
         <h2>The Research-Practice Gap in Education</h2>
         <p>There are two sides to the story of research in education. At its best, research helps teachers by letting them learn from the mistakes of others. Using research allows teachers to become well-developed professionals without having to make mistakes themselves in the classroom (Potter, 2020).</p>
-        <p>At its worst, engaging with research is time-consuming and leaves teachers with further work to do in figuring out how to translate research findings into their own classes (Bartels, 2003). As Lee and Wiliam (2005, p. 280) state, ‘the problem with the “what works” approach is that it leads to models which have the greatest effects, on average, across all teachers’. This leaves no guarantee that what works on average will work in a given teacher’s classroom.</p>
-        <p>Of course, these positions are the extremes. In between there is a wide corpus of research on how educational research influnces the decisions that teachers make in the classroom.</p>
+        <p>At its worst, engaging with research is time-consuming and leaves teachers with further work to do in figuring out how to translate research findings into their own classes (Bartels, 2003). There's also no guarentee that implementing recommendations from research will work in a given teacher's classroom. As Lee and Wiliam (2005, p. 280) state, ‘the problem with the “what works” approach is that it leads to models which have the greatest effects, on average, across all teachers’. In practice, there is no such thing as an average classroom.</p>
+        <p>Of course, these positions are the extremes. In between there is a wide corpus of research on how educational research influnces the decisions that teachers make in the classroom. If nothing else, research gives teachers a second opinion with which they can evaluate thier own practice, consider how to evolve, and stay connected to the wider profession.</p>
+        <p>Despite the fact that that policy heavily recommends research as a source of influence for teachers (Cain, 2019), there is no firm consensus on how well received it is in practice. As such, a research-practice gap is commonly acknowledged in both the UK (e.g. Biesta, 2007; McIntyre, 2005) and abroad (e.g. Admiraal, et al., 2017; Bartels, 2003).</p>
+
+        <h3>How do teachers engage with research?</h3>
         <p>The literature is split between views suggesting that the use of research is widespread (Everton, et al., 2002) and increasing (National Teacher Research Panel, 2011, cited in Webster, et al., 2012), tempered by studies claiming research is not frequently accessed (Cain, 2016), and that although teachers value research, they aren’t engaging with it on a regular basis (Prendergast & Rickinson, 2019).</p>
-        <p>Despite the fact that that policy heavily recommends research as a source of influence for teachers, there is no firm consensus on how well received it is in practice. As such, a research-practice gap is commonly acknowledged in both the UK (Biesta, 2007b; McIntyre, 2005) and abroad (e.g. Admiraal, et al., 2017; Bartels, 2003).</p>
-        <p>There is no consensus for explaining the research-practice gap, though several contributing theories are put forward. Bartels (2003) argues that journal articles, the most common form of presenting research, ‘do not seem to function well as a mechanism for communicating information for teachers’ (p. 737). Along similar lines, Olson (2004) posits that journal-based research lacks the context necessary for its suggestions to be effectively implemented. Others suggest it’s the content, not the medium, that causes the issue, rooted in the fact that research doesn’t focus on topics that are of interest to teachers (Vanderlinde & van Braak, 2010). On the occasions when both the medium and the content are accessible, there are concerns that teachers struggle to successfully implement the suggestions from research, finding them at odds with their classroom practices (Brown & Flood, 2018).</p>
-        <p>Overall, there is a clear sentiment from the the teaching community that evidence from research <em>can</em> be both a useful and powerful influence on the evolution of classroom practice. Teachers complain that their main difficulty lies in accessing evidence in the first place, and in finding the time to synthesise research findings. The literature acknowledges that research is largely hidden from teachers, and its influence invisible, embedded in policy and doctrine (Cain & Allan, 2017).</p>
-        <p>"I don’t have time to sift through journals and papers, and then read, and think, and try to find things that might be relevant to what I’m looking for."</p>
+        <p>There is no unanimity for explaining the research-practice gap, though several contributing theories are put forward.</p>
+        <p>Bartels (2003) argues that journal articles, the most common form of presenting research, ‘do not seem to function well as a mechanism for communicating information for teachers’ (p. 737). Along similar lines, Olson (2004) posits that journal-based research lacks the context necessary for its suggestions to be effectively implemented. Others suggest it’s the content, not the medium, that causes the issue, rooted in the fact that research doesn’t focus on topics that are of interest to teachers (Vanderlinde & van Braak, 2010).</p>
+        <p>On the occasions when both the medium and the content are accessible, there are concerns that teachers struggle to successfully implement the suggestions from research, finding them at odds with their classroom practices (Brown & Flood, 2018).</p>
+        <p>Overall, there is a clear sentiment from the the teaching community that evidence from research <em>can</em> be both a useful and powerful influence on the evolution of classroom practice. This influence is not necassarily prescriptive, rather, engaging with research is shown to help teachers expand their teaching mindset and their general approach towards teaching (Cain, 2019).</p>
 
-        <p>Add:</p>
-        <p>Cain, T., 2019. How teachers are really using research. [Online] Available at: https://schoolsweek.co.uk/how-teachers-are-really-using-research/ [Accessed April 2020].</p>
+        <h3>Addressing the research-practice gap</h3>
+        <p>Teachers lament that their two main difficulties lie in accessing evidence in the first place, and then in finding the time to synthesise research findings. The literature acknowledges that research is largely hidden from teachers, and its influence is invisible, embedded in policy and doctrine (Cain & Allan, 2017).</p>
+        <p>As such, 52 Papers attempts to address these two difficulties by providing an easy way for teachers to regularly access education research, and to provide a simple, readable way for teachers to engage with that research.</p>
 
-        <h3>References</h3>
-        <p>Admiraal, W. et al., 2017. Linking theory and practice: teacher research in history and geography classrooms. Educational Action Research, 25(2), pp. 316-331.</p>
-        <p>Bartels, N., 2003. How teachers and researchers read academic articles. Teaching and Teacher Education, 19(7), pp. 737-753.</p>
-        <p>Biesta, G., 2007b. Bridging the Gap Between Educational Research and Educational Practice: The need for critial distance. Educational Research and Evaluation, 13(3), pp. 295-301.</p>
-        <p>Brown, C. & Flood, J., 2018. Lost in translation? Can the use of theories of action be effective in helping teachers develop and scale up research-informed practices?. Teaching and Teacher Education, Volume 72, pp. 144-154.</p>
-        <p>Cain, T., 2016. Research utilisation and the struggle for the teacher’s soul: a narrative review. European Journal of Teacher Education, 39(5), pp. 616-629.</p>
-        <p>Cain, T. & Allan, D., 2017. The invisible impact of educational research. Oxford Review of Education, 43(6), pp. 718-732.</p>
-        <p>Everton, T., Galton, M. & Pell, T., 2002. Educational research and the teacher. Research Papers in Education Policy and Practice, 17(4), pp. 373-401.</p>
-        <p>Lee, C. & Wiliam, D., 2005. Studying changes in the practice of two teachers developing assessment for learning. International Journal of Teacher Development, 9(2), pp. 265-283.</p>
-        <p>McIntyre, D., 2005. Bridging the gap between research and practice. Cambridge Journal of Education, 35(3), pp. 357-382.</p>
-        <p>Olson, D., 2004. The triumph of hope over experience in the search for “what works”: A response to Slavin.. Educational Researcher, 33(1), pp. 24-26.</p>
-        <p>Potter, I., 2020. BERA Bites issue 5: Research used or produced in schools: Which informs practitioners most?, London: British Educational Research Association.</p>
-        <p>Prendergast, S. & Rickinson, M., 2019. Understanding school engagement in and with research. The Australian Educational Researcher, Volume 46, pp. 17-39.</p>
-        <p>Vanderlinde, R. & van Braak, J., 2010. The gap between educational research and practice: views of teachers, school leaders, intermediaries and researchers. British Educational Research Journal, 36(2), pp. 299-316.</p>
-        <p>Webster, A. et al., 2012. What influences teachers to change their practice? A rapid research review, Bristol: National Centre for Social Research for CUBeC.</p>
+        <div class="reference-list">
+          <h3>References</h3>
+          <p>Admiraal, W. et al., 2017. Linking theory and practice: teacher research in history and geography classrooms. Educational Action Research, 25(2), pp. 316-331.</p>
+          <p>Bartels, N., 2003. How teachers and researchers read academic articles. Teaching and Teacher Education, 19(7), pp. 737-753.</p>
+          <p>Biesta, G., 2007. Bridging the Gap Between Educational Research and Educational Practice: The need for critial distance. Educational Research and Evaluation, 13(3), pp. 295-301.</p>
+          <p>Brown, C. & Flood, J., 2018. Lost in translation? Can the use of theories of action be effective in helping teachers develop and scale up research-informed practices?. Teaching and Teacher Education, Volume 72, pp. 144-154.</p>
+          <p>Cain, T., 2016. Research utilisation and the struggle for the teacher’s soul: a narrative review. European Journal of Teacher Education, 39(5), pp. 616-629.</p>
+          <p>Cain, T. & Allan, D., 2017. The invisible impact of educational research. Oxford Review of Education, 43(6), pp. 718-732.</p>
+          <p>Cain, T., 2019. How teachers are really using research. [Online] Available at: https://schoolsweek.co.uk/how-teachers-are-really-using-research/ [Accessed April 2020].</p>
+          <p>Everton, T., Galton, M. & Pell, T., 2002. Educational research and the teacher. Research Papers in Education Policy and Practice, 17(4), pp. 373-401.</p>
+          <p>Lee, C. & Wiliam, D., 2005. Studying changes in the practice of two teachers developing assessment for learning. International Journal of Teacher Development, 9(2), pp. 265-283.</p>
+          <p>McIntyre, D., 2005. Bridging the gap between research and practice. Cambridge Journal of Education, 35(3), pp. 357-382.</p>
+          <p>Olson, D., 2004. The triumph of hope over experience in the search for “what works”: A response to Slavin.. Educational Researcher, 33(1), pp. 24-26.</p>
+          <p>Potter, I., 2020. BERA Bites issue 5: Research used or produced in schools: Which informs practitioners most?, London: British Educational Research Association.</p>
+          <p>Prendergast, S. & Rickinson, M., 2019. Understanding school engagement in and with research. The Australian Educational Researcher, Volume 46, pp. 17-39.</p>
+          <p>Vanderlinde, R. & van Braak, J., 2010. The gap between educational research and practice: views of teachers, school leaders, intermediaries and researchers. British Educational Research Journal, 36(2), pp. 299-316.</p>
+          <p>Webster, A. et al., 2012. What influences teachers to change their practice? A rapid research review, Bristol: National Centre for Social Research for CUBeC.</p>
+        </div>
 
       </section>
 
