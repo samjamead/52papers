@@ -27,10 +27,9 @@ tags: [Subscribe, 52 Papers]
 
         <p>An education research paper per week. Summarised. In your inbox.</p>
         <p>It's free!</p>
-        <form id="subscription-form">
-          <label for="email"></label>
+        <form id="subscription-form" novalidate>
           <input type="email" id="email" name="email" placeholder="e.g. pierre@bourdieu.fr" />
-          <input type="submit" value="Subscribe" id="submit-btn">
+          <button type="submit" class="btn-submit">Submit</button>
           <div class="messages">
             <p class="success"><i class="fas fa-angle-double-right"></i> Success! You've been added to our subscriber list.</p>
             <p class="error">Please enter a valid email address</p>

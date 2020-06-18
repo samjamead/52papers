@@ -62,7 +62,7 @@ jQuery(document).ready(function($){
         },
         complete: function(){
           $("#email").prop( "disabled", true );
-          $("#submit-btn").prop( "disabled", true ).attr('value', 'Subscribed');
+          $(".btn-submit").prop( "disabled", true ).html('<i class="far fa-check-circle"></i>');
           $(".success").fadeIn();
           console.log('Webhook sent');
         }

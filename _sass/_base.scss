@@ -39,14 +39,23 @@ section {
 p {
   line-height: 1.7;
   margin-bottom: 1rem;
+  font-size: 15px;
   max-width: $paragraph-width;
-  font-size: $base-font-size;
+  @include for-tablet-portrait-up {
+    font-size: $base-font-size;
+  };
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
   margin-bottom: 0.667rem;
+}
+h1 {
+  font-size: 28px;
+  @include for-tablet-portrait-up {
+    font-size: 36px;
+  };
 }
 h3 {
   margin-top: 2rem;
