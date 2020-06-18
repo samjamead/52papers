@@ -4,40 +4,15 @@ title: 52 Papers
 body_id: homepage
 ---
 
-<div class="masthead">
-  <div class="big-container">
-    <div class="hero">
-      {% for post in site.posts limit:1 %}
-        <div class="herometa">
-          <h3>YEAR {{ post.yearnum}} &nbsp;&nbsp;//&nbsp;&nbsp; WEEK {{ post.week }}</h3>
-
-        </div>
-        <div class="heropost">
-
-          {% include tagsloop.html %}
-
-          <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-          <p class="subheading">{{ post.paperauthors | join: ", " }} [{{ post.yearpub }}]</p>
-
-          <p class="description">{{ post.description }}</p>
-          <p class="postlink"><i class="fas fa-angle-double-right"></i> <a href="{{ post.url }}">Read summary</a> </p>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</div>
-
 <div class="stripe">
   <div class="container">
-    <div class="about-callout">
-      <h2>About 52 Papers</h2>
-      <p>52 Papers helps teachers bridge the research-practice gap. We summarise one academic paper in education each week.</p>
-      <p><i class="fas fa-angle-double-right"></i> <a href="/about">Read more</a></p>
-    </div>
-    <div class="subscribe-callout">
-      <h2>Subscribe</h2>
-      <p>An education research paper per week. Summarised. In your inbox. <br /> (It's free!)</p>
-      <p><i class="fas fa-angle-double-right"></i> <a href="/subscribe">Subscribe</a> </p>
+    <div class="hero">
+      <p>52 Papers helps teachers engage with research in education.</p>
+      <p>One paper per week. Summarised. In your inbox.</p>
+      <ul>
+        <li><i class="fas fa-angle-double-right"></i> <a href="/about">About 52 Papers</a></li>
+        <li><i class="fas fa-angle-double-right"></i> <a href="/subscribe">Subscribe</a></li>
+      </ul>
     </div>
   </div>
 </div>
@@ -46,13 +21,10 @@ body_id: homepage
 
   <section class="archive-list" id="allposts">
 
-    <h2>Year 1</h2>
-    <hr />
-
-    {% for post in site.posts offset:1 %}
+    {% for post in site.posts  %}
       <div class="paper-wrapper">
         <div class="paper-meta">
-          <h3>WEEK {{ post.week }}</h3>
+          <h3>YEAR {{ post.yearnum }} &nbsp;&nbsp;//&nbsp;&nbsp; WEEK {{ post.week }}</h3>
           <div class="tags">
             {% include tagsloop.html %}
           </div>
