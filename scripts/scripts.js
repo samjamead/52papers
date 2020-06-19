@@ -88,8 +88,11 @@ $( window ).resize(function() {
 
 // Dynamically set bottom margin of body for sticky footer
 function stickyFooter() {
-  var bodyBottomMargin = $("footer").outerHeight();
-  $("body").css("margin-bottom", bodyBottomMargin);
+  setTimeout (function () {
+    var bodyBottomMargin = $("footer").outerHeight();
+    console.log(bodyBottomMargin);
+    $("body").css("margin-bottom", bodyBottomMargin);
+  }, 100);
 }
 
 // Get absolute width of iFrame and set height using known ratio (for Youtube it's 0.5625)

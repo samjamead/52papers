@@ -1,0 +1,174 @@
+// =======================================
+//  Components! Global-ish
+// =======================================
+.stripe {
+  background: $dark-grey;
+  color: $soft-grey;
+  text-align: center;
+  @include for-tablet-landscape-up {
+    text-align: left;
+  };
+  .hero {
+    border-top: $border;
+    padding: 2rem 0;
+    text-align: center;
+    @include for-tablet-landscape-up {
+      text-align: left;
+    };
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      @include for-tablet-landscape-up {
+        margin-left: 0;
+      };
+    }
+    a {
+      color: #9ea5b3;
+      transition: 0.4s ease;
+      &:hover {
+        text-decoration: underline;
+        color: #fff;
+      }
+    }
+  }
+}
+// =======================================
+//  Homepage
+// =======================================
+.all-posts {
+  h2 {
+    font-size: 1.3rem;
+    a {
+      color: $dark-grey;
+      text-decoration: underline;
+      transition: 0.4s ease;
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+  .subheading {
+    margin-bottom: 1.5rem;
+  }
+  p {
+    margin-bottom: 0.667em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      color: $dark-grey;
+      text-decoration: underline;
+      transition: 0.4s ease;
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+}
+// =======================================
+//  Post layout
+// =======================================
+.paper-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  .paper-meta {
+    flex: 0 0 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+    @include for-tablet-landscape-up {
+      text-align: left;
+      flex-basis: 250px;
+      padding-right: 3rem;
+    };
+    h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: $dark-grey;
+      letter-spacing: 1px;
+      font-size: 0.95rem;
+    }
+  }
+  .paper-content {
+    flex: 0 0 100%;
+    @include for-tablet-landscape-up {
+      flex: 1 1 650px;
+      border-left: $border;
+      padding-left: 3rem;
+    };
+    h1 {
+      margin-top: 0;
+    }
+  }
+}
+
+// =======================================
+//  Post layout
+// =======================================
+
+.reference-list {
+  p {
+    font-size: 15px;
+    margin-left: 30px;
+    text-indent: -30px;
+  }
+}
+
+form {
+  margin-bottom: 1rem;
+}
+#email, .btn-submit {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  &:focus {
+    outline: none;
+  }
+}
+#email {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  &:disabled {
+    color: #9da5b4;
+  }
+  @include for-tablet-portrait-up {
+    min-width: 300px;
+  };
+}
+.btn-submit {
+  cursor: pointer;
+  background: #28a745;
+  border-color: #28a745;
+  min-width: 100px;
+  color: #fff;
+  border-left: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: -5px;
+  transition: 0.4s ease;
+  &:hover {
+    background: darken(#28a745, 10%);
+  }
+  &:disabled {
+    cursor: default;
+    background: #28a745;
+  }
+  @include for-tablet-portrait-up {
+    min-width: 130px;
+  };
+}
+.error, .success {
+  display: none;
+}
+.error {
+  color: #ff3869;
+}
+.messages {
+  padding-top: 0.25rem;
+  min-height: 2rem;
+  p {
+    margin-bottom: 0;
+  }
+}

@@ -3,31 +3,34 @@
 ---
 @charset "utf-8";
 
-$brand-color:           #58e2C3; // green
-$accent-color:          #6499e3; // blue
-$light-grey:            #e7e7e7;
-$grey-color:            #979797;
-$dark-grey:             #24272d;
-$background-color:      #fff;
+$brand-color:           #6499e3; 
+$accent-color:          $brand-color; // Not used
+$light-grey:            #e7e7e7; // Borders, lines
+$soft-grey:            #9da5b4; // Text on dark backgrounds
+$dark-grey:             #24272d; // For dark backgrounds and text
+$background-color:      #fdf9f5; // Guardian cream
+
 $text-color:            $dark-grey;
-$border:                1px solid $light-grey;
-$spacing-unit:          30px;
+
+$base-font-size:        16px;
 $base-font-family:      'Avenir', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:        18px;
-$base-font-weight:      400;
+$base-font-weight:      normal;
 $small:                 $base-font-size * 0.875;
-$headings-font-weight:  900;
+$paragraph-width:       600px;
+
 $headings-font-family:  'Lato', $base-font-family;
-$paragraph-width:       650px;
+$headings-font-weight:  900;
+
+$border:                1px solid $light-grey;
+$spacing-unit:          2rem;
 
 @import
   "breakpoints",
   "base",
-  "classes",
+  "helpers",
+  "global",
   "header",
   "footer",
-  "post",
-  "homepage",
-  "page",
-  "tags"
+  "components",
+  "post"
 ;

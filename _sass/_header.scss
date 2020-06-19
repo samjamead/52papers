@@ -9,9 +9,10 @@
     align-items: center;
     flex-wrap: wrap-reverse;
     transition: 0.3s ease;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     @include for-tablet-landscape-up {
       margin-top: 0;
-      padding: 20px 15px;
     }
   }
   .menu-open {
@@ -38,10 +39,7 @@
     }
   }
   button {
-    line-height: 1;
-    &:focus {
-      outline: none;
-    }
+    // All style on .hamburger
     @include for-tablet-landscape-up {
       display: none;
     }
@@ -50,7 +48,6 @@
     display: block;
     flex: 0 0 100%;
     padding: 15px 0;
-    border-bottom: 1px solid transparent;
     @include for-tablet-landscape-up {
       padding: 0;
       margin: 0;
@@ -62,7 +59,6 @@
       display: block;
       font-family: $headings-font-family;
       padding: 15px 10px;
-      font-size: 15px;
       font-weight: normal;
       text-align: center;
       transition: 0.4s ease;
@@ -86,7 +82,7 @@
 
 // Hamburger with thanks to Jonathon Suh
 .hamburger {
-  padding: 15px 0 15px 15px;
+  padding: 15px 0 12px 15px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -98,11 +94,11 @@
   background-color: transparent;
   border: 0;
   margin: 0;
+  line-height: 0.5;
+  &:focus {
+    outline: none;
+  }
   overflow: visible; }
-  .hamburger:hover {
-    opacity: 0.7; }
-  .hamburger.is-active:hover {
-    opacity: 0.7; }
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {

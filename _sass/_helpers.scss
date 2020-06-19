@@ -1,7 +1,51 @@
 // =======================================
-//  Tags SASS
+//  Global helpers
 // =======================================
-
+.phones-only {
+  @include for-tablet-portrait-up {
+    display: none;
+  };
+}
+.small {
+  font-size: $small;
+}
+.white {
+  color: #fff;
+}
+.space-above {
+  margin-top: 2em;
+}
+.left-icon {
+  margin-right: 5px;
+}
+.right-icon {
+  margin-left: 5px;
+}
+.img-bg {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: $border;
+  background: #f7f8fa;
+}
+.heading-underline {
+  margin-top: 10px;
+  margin-bottom: 2rem;
+  width: 4rem;
+  border-bottom: 3px solid #23272d;
+}
+.youtube {
+  max-width: 900px;
+}
+.lazy {
+  background: #F1F1FA;
+  width: 100%;
+  height: 450px;
+  display: block;
+  border: 0;
+}
+// =======================================
+//  Tags
+// =======================================
 .tag {
   display: inline-block;
   border-radius: 5px;
