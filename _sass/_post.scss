@@ -10,6 +10,9 @@ article {
   }
   p {
     margin-bottom: 1.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   .post-meta {
     font-size: 0.85rem;
@@ -34,9 +37,16 @@ article {
     margin-bottom: 1rem;
   }
 }
-.suggested-reading {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.subscribe-nudge {
+  margin-top: 2rem;
+}
+.subscribe-nudge, .suggested-reading {
+  border-top: $border;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  P:last-child {
+    margin-bottom: 0;
+  }
 }
 .footnote-ref {
   margin-left: 2px;
