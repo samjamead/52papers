@@ -9,8 +9,8 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: #f8f8f8;
-  padding: 1.5rem 0rem;
+  background: linear-gradient($dark-grey, #282b33);
+  padding: 3rem 0rem;
   border-top: $border;
   text-align: center;
   @include for-tablet-portrait-up {
@@ -19,9 +19,15 @@ footer {
   h2 {
     font-family: 'Merriweather', $base-font-family;
   }
+  p {
+    color: #fff;
+  }
   p, ul {
     font-size: 15px;
     max-width: 100%;
+  }
+  h2, ul {
+    color: #9da5b4;
   }
   i {
     font-size: 11px;
