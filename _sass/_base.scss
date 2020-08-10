@@ -118,11 +118,10 @@ iframe {
 }
 pre,
 code {
-  background-color: #f5f5f5;
-  color: #f14668;
-  font-size: .875em;
-  font-weight: 400;
-  padding: .25em .5em .25em;
+  display: inline-block;
+  background-color: lighten(#efc0bf, 5%);
+  font-size: 0.9rem;
+  padding: 0.9rem;
 }
 pre {
   padding: 8px 12px;
