@@ -30,8 +30,13 @@ body_id: homepage
         </div>
 
         <div class="paper-content">
+          <p class="post-date">{{ post.date | date: "%A %e %B, %Y" }}</p>
           <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <p class="subheading">{{ post.paperauthors | join: ", " }} [{{ post.yearpub }}]</p>
+          <p class="subheading">
+            {% if post.paperauthors %}
+              {{ post.paperauthors | join: ", " }} [{{ post.yearpub }}]
+            {% endif %}
+          </p>
           <p>{{ post.description }}</p>
           <p class="postlink"><i class="fas fa-angle-double-right left-icon"></i> <a href="{{ post.url }}">Read summary</a> </p>
         </div>
