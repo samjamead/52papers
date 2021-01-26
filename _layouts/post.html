@@ -4,64 +4,52 @@ layout: default
 
   <div class="container">
 
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="post-column">
 
-      <div class="paper-wrapper">
-        <div class="paper-meta">
-          <h3>YEAR {{ page.yearnum}} &nbsp;&nbsp;//&nbsp;&nbsp; WEEK {{ page.week }}</h3>
+      <div class="post-meta">
 
-          <p class="post-meta">Summarised by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span></p>
-          <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+        <p>Filed under {% for tag in page.tags %}<a href="/tags/{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
 
-          <div class="tags">
-            {% for tag in page.tags %}
-              <div class="tag {{ tag | downcase | replace: ' ', '-' }}">
-                {{ tag }}
-              </div>
-            {% endfor %}
-          </div>
+        <p class="post-date"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
 
-          <p><strong>{{ page.readingtime }} minute read</strong></p>
-
-        </div>
-
-        <div class="paper-content">
-
-
-
-          <div class="post-header">
-            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-            <p class="subheading">
-              {% if page.paperauthors %}
-                {{ page.paperauthors | join: ", " }} [{{ page.yearpub }}]
-              {% endif %}
-            </p>
-          </div>
-
-
-          <div class="post-content" itemprop="articleBody">
-            <section>
-              {{ content }}
-            </section>
-          </div>
-
-          <div class="subscribe-nudge">
-            <p>Enjoyed this summary? <a href="/subscribe">Subscribe to 52 Papers</a> for a paper each week, summarised, in your inbox.</p>
-          </div>
-
-          <div class="suggested-reading">
-            {% if page.next %}
-              <p>Read next:<br /> <a class="" rel="next" href="{{ page.next.url }}">{{ page.next.title }}</a></p>
-            {% endif %}
-
-            {% if page.previous %}
-              <p>Read previous:<br /> <a class="" rel="prev" href="{{ page.previous.url }}">{{ page.previous.title }}</a></p>
-            {% endif %}
-          </div>
-
-        </div>
       </div>
 
-    </article>
+      <article itemscope itemtype="http://schema.org/BlogPosting">
+
+        <div class="post-header">
+          <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+          <p class="subheading">
+            {% if page.paperauthors %}
+              {{ page.paperauthors | join: ", " }} [{{ page.yearpub }}]
+            {% endif %}
+          </p>
+        </div>
+
+
+        <div class="post-content" itemprop="articleBody">
+          <section>
+            {{ content }}
+          </section>
+        </div>
+
+      </article>
+
+        <div class="subscribe-nudge">
+          <p>Enjoyed this summary? <a href="/subscribe">Subscribe to 52 Papers</a> for a paper each week, summarised, in your inbox.</p>
+        </div>
+
+        <div class="suggested-reading">
+          {% if page.next %}
+            <p>Read next:<br /> <a class="" rel="next" href="{{ page.next.url }}">{{ page.next.title }}</a></p>
+          {% endif %}
+
+          {% if page.previous %}
+            <p>Read previous:<br /> <a class="" rel="prev" href="{{ page.previous.url }}">{{ page.previous.title }}</a></p>
+          {% endif %}
+        </div>
+
+
+
+    </div>
 
   </div>

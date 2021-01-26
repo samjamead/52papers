@@ -2,8 +2,34 @@
 //  Post SASS
 // =======================================
 
+.post-column {
+  padding-top: 20px;
+  @include for-tablet-landscape-up {
+    padding-top: 80px;
+  };
+}
+.post-meta {
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+  }
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
 article {
+  max-width: 800px;
+  padding-top: 1rem;
   padding-bottom: 1rem;
+  @include for-tablet-landscape-up {
+    border-right: 1px solid #ccc;
+  };
   h2 {
     font-size: 1.333rem;
     margin-top: 2rem;
@@ -14,20 +40,9 @@ article {
       margin-bottom: 0;
     }
   }
-  .post-meta {
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-  }
   .post-header {
-    margin-top: 1rem;
-    border-top: $border;
-    border-bottom: $border;
-    padding: 1rem 0;
-    @include for-tablet-landscape-up {
-      margin-top: 0;
-      border-top: none;
-      padding-top: 0;
-    };
+    border-bottom: 1px solid #ccc;
+    padding: 2rem 0;
     p {
       margin: 0;
     }
