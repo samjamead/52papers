@@ -8,18 +8,18 @@ $accent-color:          $brand-color; // Not used
 $light-grey:            #e7e7e7; // Borders, lines
 $soft-grey:             #9da5b4; // Text on dark backgrounds
 $dark-grey:             #24272d; // For dark backgrounds and text
-$background-color:      #f4f0e5; // Alternative would be Guardian cream (#fdf9f5)
+$background-color:      #fdf9f5;
 
 $text-color:            $dark-grey;
 
 $base-font-size:        16px;
-$base-font-family:      'Avenir', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-weight:      normal;
+$base-font-family:      -apple-system, BlinkMacSystemFont, segoe ui, Avenir, Roboto, Helvetica, Arial, sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+$base-font-weight:      400;
 $small:                 $base-font-size * 0.875;
 $paragraph-width:       600px;
 
-$headings-font-family:  'Lato', $base-font-family;
-$headings-font-weight:  900;
+$headings-font-family:  $base-font-family;
+$headings-font-weight:  600;
 
 $border:                1px solid $light-grey;
 $spacing-unit:          2rem;

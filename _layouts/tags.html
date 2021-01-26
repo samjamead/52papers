@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+<div class="container">
+
+  <section>
+
+    <div class="post-list-header">
+      <h2>Filed under <span class="title-tag">{{ page.title }}</span></h2>
+    </div>
+    <div class="main-posts-list">
+      {% for tag in site.tags %}
+        {% if tag[0] contains page.title %}
+          {% for post in tag[1] %}
+
+          <div class="post-row">
+            <div class="post-reference">
+              {{ post.date | date: "%b %Y" }}
+            </div>
+            <div class="post-title">
+              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            </div>
+            <div class="post-author">
+              <p class="subheading">
+                {% if post.paperauthors %}
+                  {{ post.paperauthors | join: ", " }} [{{ post.yearpub }}]
+                {% endif %}
+              </p>
+            </div>
+            <div class="post-tag">
+              <a class="tag" href="/tags/{{ post.tags | first | slugify }}">{{ post.tags | first }}</a>
+            </div>
+
+          </div>
+
+          {% endfor %}
+
+        {% endif %}
+
+      {% endfor %}
+    </div>
+
+  </section>
+
+</div>
+
+<div class="container">
+
+  <section>
+
+    <h3>All Tags</h3>
+
+    <hr />
+
+    <ul class="inline-list tags-list" style="max-width: 100%;">
+
+      {% capture tags %}
+        {% for tag in site.tags %}
+            <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+              <a class="tag {{ tag[0] | slugify: 'pretty' }}" href="/tags/{{ tag[0] | slugify: 'pretty' }}">{{ tag[0] }} <span>({{ tag[1].size }})</span></a>
+            </li>
+        {% endfor %}
+      {% endcapture %}
+
+      {% assign sorted_tags = tags | split:'</li>' | sort | join:'</li>' %}
+
+      {% for tag in sorted_tags %}
+        {{ tag }}
+      {% endfor %}
+
+    </ul>
+
+  </section>
+
+</div>
