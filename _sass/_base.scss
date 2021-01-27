@@ -32,8 +32,12 @@ body {
 }
 
 section {
-  padding-top: $spacing-unit;
-  padding-bottom: $spacing-unit;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @include for-tablet-portrait-up {
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit;
+  };
 }
 
 p {

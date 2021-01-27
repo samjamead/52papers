@@ -4,14 +4,12 @@
 .stripe {
   background: $dark-grey;
   color: $soft-grey;
-  text-align: center;
   @include for-tablet-landscape-up {
     text-align: left;
   };
   .hero {
     border-top: $border;
     padding: 2rem 0;
-    text-align: center;
     @include for-tablet-landscape-up {
       text-align: left;
     };
@@ -40,13 +38,16 @@
 }
 .tag {
   display: inline-block;
-  padding: 15px;
+  padding: 10px;
   background: #f8efe7;
   color: #000;
   font-size: 0.75rem;
   margin-bottom: 0;
   transition: 0.4s ease;
   font-family: 'Courier New', monospace;
+  @include for-tablet-portrait-up {
+    padding: 15px;
+  };
   &:last-child {
     margin-right: 0;
   }
@@ -58,9 +59,9 @@
 }
 .title-tag {
   @extend .tag;
-  margin-left: 10px;
   font-size: 16px;
   font-weight: normal;
+  margin-left: 10px;
 }
 // =======================================
 //  Homepage
@@ -103,7 +104,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
+  @include for-tablet-portrait-up {
+    padding-bottom: 25px;
+  };
   h2 {
     margin-bottom: 0;
   }
@@ -111,6 +115,10 @@
     font-size: 14px;
     font-family: 'Courier New', monospace;
     margin-bottom: 0;
+    display: none;
+    @include for-tablet-landscape-up {
+      display: inline-block;
+    };
   }
 }
 .main-posts-list {
@@ -122,8 +130,10 @@
     align-items: center;
     flex-wrap: wrap;
     border-top: 1px solid #ccc;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    @include for-tablet-landscape-up {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    };
   }
   .post-reference, .post-title, .post-author, .post-tag {
     flex: 0 0 100%;
@@ -141,7 +151,6 @@
     };
   }
   .post-title {
-    padding-right: 60px;
     h3 {
       font-size: 17px;
       margin-bottom: 0;
@@ -150,6 +159,7 @@
       }
     }
     @include for-tablet-landscape-up {
+      padding-right: 60px;
       flex: 1 1 40%;
       background: transparent;
     };
@@ -169,45 +179,6 @@
       background: transparent;
       text-align: right;
     };
-  }
-}
-
-// =======================================
-//  Post layout
-// =======================================
-.paper-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 2rem 0;
-  .paper-meta {
-    flex: 0 0 100%;
-    margin-bottom: 1rem;
-    text-align: center;
-    @include for-tablet-landscape-up {
-      text-align: left;
-      flex-basis: 250px;
-      padding-right: 3rem;
-    };
-    h3 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-      color: $dark-grey;
-      letter-spacing: 1px;
-      font-size: 0.95rem;
-    }
-  }
-  .paper-content {
-    flex: 0 0 100%;
-    @include for-tablet-landscape-up {
-      flex: 1 1 650px;
-      border-left: $border;
-      padding-left: 3rem;
-    };
-    h1 {
-      margin-top: 0;
-    }
   }
 }
 
