@@ -1,34 +1,24 @@
 ---
 layout: default
-title: 52 Papers
-body_id: homepage
 ---
-
-<div class="stripe">
-  <div class="container">
-    <div class="hero">
-      <p>52 Papers helps teachers engage with <br class="phones-only" /> research in education.</p>
-      <p class="white">Research in education. Summarised. <br class="phones-only" /> In your inbox.</p>
-      <ul class="inline-list">
-        <li><i class="fas fa-angle-double-right left-icon"></i> <a href="/about">About 52 Papers</a></li>
-        <li><i class="fas fa-angle-double-right left-icon"></i> <a href="/subscribe">Subscribe</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
 
 <div class="container">
 
   <section>
 
     <div class="post-list-header">
-      <h2>All Summaries <a class="title-tag" href="#tags">Filter</a></h2>
-      <p>Updated: {{ "now" | date: "%d %b %Y" }}</p>
+      <h2>Filed under <span class="title-tag">{{ page.title }}</span></h2>
     </div>
     <div class="main-posts-list">
-      {% for post in site.posts %}
+      {% for tag in site.tags %}
+        {% if tag[0] contains page.title %}
+          {% for post in tag[1] %}
 
-        {% include postrow.html %}
+            {% include postrow.html %}
+
+          {% endfor %}
+
+        {% endif %}
 
       {% endfor %}
     </div>
@@ -37,7 +27,7 @@ body_id: homepage
 
 </div>
 
-<div class="container" id="tags">
+<div class="container">
 
   <section>
 
