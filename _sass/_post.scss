@@ -31,7 +31,7 @@
   }
   .post-date {
     @include for-tablet-landscape-up {
-      text-align: right;
+      // text-align: right;
     };
   }
   a {
